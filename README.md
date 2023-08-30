@@ -33,9 +33,9 @@ When deploying an app you may need to deploy additional services, this Github Ac
 ### Simple
 
 ```yaml
-- uses: convictional/trigger-workflow-and-wait@v1.6.1
+- uses: patriotsoftware/trigger-workflow-and-wait@v1.6.1
   with:
-    owner: keithconvictional
+    owner: synergydatasystems
     repo: myrepo
     github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
 ```
@@ -43,9 +43,9 @@ When deploying an app you may need to deploy additional services, this Github Ac
 ### All Options
 
 ```yaml
-- uses: convictional/trigger-workflow-and-wait@v1.6.1
+- uses: patriotsoftware/trigger-workflow-and-wait@v1.6.1
   with:
-    owner: keithconvictional
+    owner: synergydatasystems
     repo: myrepo
     github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
     github_user: github-user
@@ -61,9 +61,9 @@ When deploying an app you may need to deploy additional services, this Github Ac
 ### Comment the current running workflow URL for a PR
 
 ```yaml
-- uses: convictional/trigger-workflow-and-wait@v1.6.1
+- uses: patriotsoftware/trigger-workflow-and-wait@v1.6.1
   with:
-    owner: keithconvictional
+    owner: synergydatasystems
     repo: myrepo
     github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
     comment_downstream_url: ${{ github.event.pull_request.comments_url }}
@@ -74,7 +74,7 @@ When deploying an app you may need to deploy additional services, this Github Ac
 You can test out the action locally by cloning the repository to your computer. You can run:
 
 ```shell
-INPUT_OWNER="keithconvictional" \
+INPUT_OWNER="synergydatasystems" \
 INPUT_REPO="myrepo" \
 INPUT_GITHUB_TOKEN="<REDACTED>" \
 INPUT_GITHUB_USER="github-user" \
@@ -104,7 +104,7 @@ jobs:
           sleep 25
 ```
 
-You can see the example [here](https://github.com/keithconvictional/trigger-workflow-and-wait-example-repo1/blob/master/.github/workflows/main.yml). For testing a failure case, just add this line after the sleep:
+You can see the example [here](https://github.com/patriotsoftware/trigger-workflow-and-wait-example-repo1/blob/master/.github/workflows/main.yml). For testing a failure case, just add this line after the sleep:
 
 ```yaml
 ...
@@ -122,9 +122,9 @@ You can see the example [here](https://github.com/keithconvictional/trigger-work
 If you do not want the latest build all of the time, please use a versioned copy of the Github Action. You specify the version after the `@` sign.
 
 ```yaml
-- uses: convictional/trigger-workflow-and-wait@v1.6.1
+- uses: patriotsoftware/trigger-workflow-and-wait@v1.6.1
   with:
-    owner: keithconvictional
+    owner: synergydatasystems
     repo: myrepo
     github_token: ${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}
 ```
